@@ -1,5 +1,5 @@
 <h1>택배조회</h1>
-<a href="https://react-tracking.vercel.app/" target="_blank"><img src="/images/tracking.png" alt="tracking"></a>
+<a href="https://react-tracking.vercel.app/" target="_blank"><img src="/public/images/tracking.png" alt="tracking"></a>
 <p>기술 : React, Javascript, TailwindCSS, Fetch, Async, Await</p>
 <p>작업기간 : 2주</p>
 <p>기여도 : 100%</p>
