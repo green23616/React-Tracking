@@ -79,17 +79,6 @@ function App() {
 
   const themeColor :ThemeColor = {
     "default":{
-      "back": "bg-indigo-500",
-      "hover": "bg-indigo-300",
-      "active": "bg-indigo-400",
-      "text": "text-indigo-500",
-      "outline": "outline-indigo-300",
-      "odd": "odd:bg-indigo-50",
-      "after": "after:bg-indigo-500",
-      "border": "border-indigo-300",
-      "rgb": "#6366f1"
-    },
-    "green":{
       "back": "bg-green-500",
       "hover": "bg-green-300",
       "active": "bg-green-400",
@@ -100,6 +89,17 @@ function App() {
       "border": "border-green-300",
       "rgb": "#31ca2c"
     },
+    "indigo":{
+      "back": "bg-indigo-500",
+      "hover": "bg-indigo-300",
+      "active": "bg-indigo-400",
+      "text": "text-indigo-500",
+      "outline": "outline-indigo-300",
+      "odd": "odd:bg-indigo-50",
+      "after": "after:bg-indigo-500",
+      "border": "border-indigo-300",
+      "rgb": "#6366f1"
+    },    
     "blue":{
       "back": "bg-blue-500",
       "hover": "bg-blue-300",
@@ -126,7 +126,7 @@ function App() {
 
   const buttons :ButtonType[] = [
     {name: "기본", theme: "default"},
-    {name: "그린", theme: "green"},
+    {name: "인디고", theme: "indigo"},
     {name: "블루", theme: "blue"},
     {name: "옐로", theme: "yellow"},
   ]
@@ -134,7 +134,7 @@ function App() {
   useEffect(()=>{
     const fetchData = async ()=>{
       try{
-        const res = await fetch(`http://info.sweettracker.co.kr/api/v1/companylist?t_key=${process.env.REACT_APP_API_KEY}`)
+        const res = await fetch(`https://info.sweettracker.co.kr/api/v1/companylist?t_key=${process.env.REACT_APP_API_KEY}`)
 
         const data = await res.json();
         setCarriers(data.Company);
